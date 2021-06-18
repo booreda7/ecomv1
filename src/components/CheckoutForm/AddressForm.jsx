@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const AddressForm = ({ checkoutToken, text }) => {
 
-    const { register, handleSubmit, watch } = useForm()
+    const { register, handleSubmit } = useForm()
     const classes = useStyles();
     const [shippingCountries, setShippingCountries] = useState([])
     const [shippingCountry, setShippingCountry] = useState('')
@@ -61,7 +61,6 @@ const AddressForm = ({ checkoutToken, text }) => {
     return (
         < >
             <Typography variant='h6' gutterBottom>Shipping Address</Typography>
-
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={3} className={classes.center}>
                     <TextField label="First name" className={classes.right} required {...register("example")}/>
@@ -103,7 +102,7 @@ const AddressForm = ({ checkoutToken, text }) => {
                 </Grid>
                 <br />
                 <div style={{display: 'flex', justifyContent: 'space-between' }}>
-                    <Button component={Link} to='/cart' variant='outlined'>Back to Cart</Button>
+                    <Button component={Link} to='/ecomv1/cart' variant='outlined'>Back to Cart</Button>
                     <Button variant='contained' type='submit' color='primary'>Next</Button>
                 </div>
             </form>

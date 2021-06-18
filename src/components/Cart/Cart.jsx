@@ -12,7 +12,7 @@ const Cart = ({cart,updateCartQuantity,emptyCart,removeFromCart}) => {
     const EmptyCart = () => (
         <Typography variant='subtitle1'> 
             You have no items in your shopping cart, start adding some! <br />
-            <Typography component={Link} to='/' className={classes.link} >Add some.</Typography>
+            <Typography component={Link} to='/ecomv1/' className={classes.link} >Add some.</Typography>
         </Typography>
     )
 
@@ -30,7 +30,7 @@ const Cart = ({cart,updateCartQuantity,emptyCart,removeFromCart}) => {
             <div className={classes.cardDetails}>
                 <Typography variant='h4' > subtotal : {cart.subtotal.formatted_with_symbol}  </Typography>
                 <Button className={classes.emptyButton} size="large" type='button' variant='contained' color='secondary' onClick={emptyCart}>Empty Cart</Button>
-                <Button component={Link} to='/checkout'  className={classes.checkoutButton} size="large" type='button' variant='contained' color='primary' >Checkout</Button>
+                <Button component={Link} to='/ecomv1/checkout'  className={classes.checkoutButton} size="large" type='button' variant='contained' color='primary' >Checkout</Button>
             </div>
         </>
         

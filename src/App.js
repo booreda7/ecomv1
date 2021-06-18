@@ -73,15 +73,15 @@ function App() {
       <div >
         <NavBar totalItems={cart.total_items} />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/ecomv1'>
             <Products products={products} onAddToCart={addToCart} />
           </Route>
 
-          <Route exact path='/cart'>
+          <Route exact path='/ecomv1/cart'>
             <Cart cart={cart} updateCartQuantity={updateCartQuantity} removeFromCart={removeFromCart} emptyCart={emptyCart}/>
           </Route>
 
-          <Route exact path='/checkout'>
+          <Route exact path='/ecomv1/checkout'>
             <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} emptyCart={emptyCart} />
           </Route>
         </Switch>

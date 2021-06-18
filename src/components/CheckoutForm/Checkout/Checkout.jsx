@@ -22,7 +22,7 @@ const Checkout = ({ cart, onCaptureCheckout, emptyCart }) => {
                     <Divider className={classes.divider} />
                 </div>
                 <br />
-                <Button variant='outlined' type='button' component={Link} to='/' onClick={emptyCart}>Back to Home</Button>
+                <Button variant='outlined' type='button' component={Link} to='/ecomv1/' onClick={emptyCart}>Back to Home</Button>
             </>
          )
     }

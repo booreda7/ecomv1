@@ -13,16 +13,16 @@ const NavBar = ({totalItems}) => {
         <>
             <AppBar position='fixed' className={classes.appBar} color='inherit'>
                 <Toolbar>
-                    <Typography color='inherit' variant='h6' className={classes.title} component={Link} to='/' >
+                    <Typography color='inherit' variant='h6' className={classes.title} component={Link} to='/ecomv1/' >
                         <img src={logo} alt='commerce site' height='25px' className={classes.image} />
                         E-Commerce 
                     </Typography>
-                    {location.pathname === '/' && (
-                    <IconButton component={Link} to='/cart' aria-label='show cart items' color='inherit' className={classes.btn}>
+                    
+                    <IconButton component={Link} to='/ecomv1/cart' aria-label='show cart items' color='inherit' className={classes.btn}>
                         <Badge badgeContent={totalItems} color='secondary'>
                             <ShoppingCart className={classes.icon}/>
                         </Badge>
-                    </IconButton> )}
+                    </IconButton> 
                 </Toolbar>
             </AppBar>
         </>
